@@ -1,0 +1,74 @@
+%heading {
+  font-weight: 700;
+  line-height: 1;
+}
+
+%white-heading {
+  color: $color-white;
+}
+
+%black-heading {
+  color: $color-black;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 4.5rem;
+
+  &--white {
+    @extend %white-heading;
+  }
+
+  &--black {
+    @extend %black-heading;
+  }
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 3rem;
+
+  &--white {
+    @extend %white-heading;
+  }
+
+  &--black {
+    @extend %black-heading;
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 2rem;
+
+  &--white {
+    @extend %white-heading;
+  }
+
+  &--black {
+    @extend %black-heading;
+  }
+
+  &--normal {
+    @extend %heading;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-black;
+  }
+}
+
+.heading-4 {
+  @extend %heading;
+}
+
+.text {
+  font-size: 1.8rem;
+
+  &--white {
+    @extend %white-heading;
+  }
+
+  &--black {
+    @extend %black-heading;
+  }
+}

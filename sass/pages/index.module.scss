@@ -1,0 +1,308 @@
+@import "../abstracts/variables";
+
+.container {
+  background-color: $color-white;
+}
+
+.backgroundPrimary {
+  background-color: $color-primary;
+}
+
+.welcome {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 10rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, max-content) 20rem;
+  grid-gap: 3rem;
+
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+
+  .workspaces {
+    border: $border-bg;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-dark;
+    overflow: hidden;
+
+    display: grid;
+
+    .accountName {
+      background-color: $color-primary-lighter;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $color-black;
+      padding: 2rem;
+    }
+
+    .workspace {
+      display: flex;
+      align-items: center;
+      background-color: $color-grey-dark-3;
+      padding: 2rem;
+
+      &__logo {
+        border-radius: $border-radius-md;
+      }
+
+      &__detail {
+        margin-left: 2rem;
+        margin-right: auto;
+      }
+
+      &__member {
+        font-size: 1.4rem;
+        color: $color-grey-dark-1;
+      }
+
+      &__expand {
+        display: none;
+        .expandText {
+          background-color: $color-white;
+          padding: 2rem;
+          text-align: center;
+        }
+
+        .expandLoading {
+          display: flex;
+          align-items: center;
+          background-color: $color-white;
+          padding: 2rem;
+
+          &:hover {
+            background-color: $color-grey-dark-3;
+          }
+
+          &__logo {
+            width: 8rem;
+            height: 8rem;
+            border-radius: $border-radius-md;
+            background-color: $color-grey-dark-2;
+          }
+
+          &__detail {
+            margin-left: 2rem;
+            margin-right: auto;
+          }
+
+          &__name {
+            width: 18rem;
+            height: 2.5rem;
+            border-radius: $border-radius-lg;
+            background-color: $color-grey-dark-2;
+          }
+
+          &__member {
+            margin-top: 8px;
+            width: 18rem;
+            height: 3rem;
+
+            & > div {
+              display: inline-block;
+              width: 2rem;
+              height: 2rem;
+              background-color: $color-grey-dark-2;
+              border-radius: $border-radius-sm;
+              border-left: 2px solid $color-white;
+
+              &:not(:last-child) {
+                margin-right: -2px;
+              }
+            }
+          }
+
+          &:hover .box1 {
+            animation: bounceUp 0.5s ease;
+          }
+
+          &:hover .box2 {
+            animation: bounceUp 0.4s ease 0.2s;
+          }
+
+          &:hover .box3 {
+            animation: bounceUp 0.3s ease 0.4s;
+          }
+
+          &:hover .box4 {
+            animation: bounceUp 0.2s ease 0.5s;
+          }
+
+          &:hover .box5 {
+            animation: bounceUp 0.1s ease 0.6s;
+          }
+
+          @keyframes bounceUp {
+            0% {
+              transform: translate(0);
+            }
+            100% {
+              transform: translateY(-3px);
+            }
+          }
+        }
+      }
+    }
+
+    .toggleCheckbox {
+      display: none;
+
+      &:not(:checked) ~ .toggleLabel {
+        font-size: 1.6rem;
+        padding: 2rem;
+        background-color: $color-white;
+        text-align: center;
+        color: $color-secondary;
+        display: block;
+
+        &::after {
+          content: " more  \2304";
+          display: inline-block;
+          color: currentColor;
+        }
+      }
+
+      &:checked ~ .toggleLabel {
+        font-size: 1.6rem;
+        padding: 2rem;
+        background-color: $color-white;
+        text-align: center;
+        color: $color-secondary;
+        display: block;
+
+        &::after {
+          content: " less  \2303";
+          display: inline-block;
+          color: currentColor;
+        }
+      }
+
+      &:checked ~ .workspace__expand {
+        display: block;
+        grid-row: 3/ 4;
+      }
+    }
+  }
+
+  .newWorkspace {
+    border-radius: $border-radius-md;
+    border: $border-bg;
+    overflow: hidden;
+    background-color: $color-white;
+
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: 9rem minmax(3rem, 1fr);
+    grid-column-gap: 2rem;
+    align-items: center;
+    margin-bottom: -2rem;
+
+    &__logoBox {
+      grid-row: 1 / span 2;
+      grid-column: 1/ 2;
+    }
+
+    &__logo {
+      object-fit: cover;
+    }
+
+    &__logo {
+      margin-bottom: -6rem;
+    }
+
+    &__text {
+      grid-row: 1/ 2;
+      grid-column: 2/ 3;
+      font-size: 1.8rem;
+    }
+  }
+
+  .differentMail {
+    border-radius: $border-radius-md;
+    padding: 2rem;
+    text-align: center;
+
+    span {
+      margin-right: 1rem;
+    }
+  }
+
+  .downloadSoftware {
+    border: $border-bg;
+    border-radius: $border-radius-md;
+    background-color: rgba($color-white, 0.1);
+    padding: 2rem;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    &__detail {
+      margin-right: auto;
+      margin-left: 2rem;
+    }
+
+    &__close {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      color: $color-white;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.guides {
+  margin-top: 4rem;
+  margin: 0 auto;
+  max-width: 70%;
+  margin-top: -15rem;
+
+  &__grid {
+    margin-top: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 4rem;
+    z-index: 1;
+
+    .guide {
+      background-color: $color-white;
+      padding: 1.3rem;
+      box-shadow: $shadow-dark;
+      transform: scale(0.95);
+      transition: all 0.2s;
+
+      display: grid;
+      grid-column-gap: 3rem;
+
+      &:hover {
+        transform: scale(1);
+      }
+
+      &__img {
+        object-fit: cover;
+      }
+
+      &__type {
+        font-size: 1.2rem;
+        color: $color-grey-dark-1;
+        font-weight: 100;
+      }
+
+      &__btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        color: $color-secondary;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-top: 3rem;
+      }
+    }
+  }
+}

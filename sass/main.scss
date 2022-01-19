@@ -1,7 +1,13 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixings";
+
 @import "./base/base";
 @import "./base/animation";
 @import "./base/typography";
 @import "./base/utilities";
 
-@import "./abstracts/variables";
-@import "./abstracts/mixings";
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./components/buttons";
+@import "./components/links";

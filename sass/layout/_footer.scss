@@ -1,0 +1,154 @@
+.footer {
+  max-width: 85%;
+  margin: 8rem auto 3rem;
+
+  .footer__detail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-column-gap: 2rem;
+    border-bottom: 2px solid $color-grey-dark-2;
+    padding: 2rem 0;
+
+    .why-slack__list,
+    .product__list,
+    .pricing__list,
+    .resources__list,
+    .company__list {
+      list-style: none;
+      font-size: 1.4rem;
+      color: $color-grey-dark-1;
+
+      & > * {
+        margin: 1.5rem 0;
+        transition: all 0.2s;
+
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+
+  .footer__privacy {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-top: 2rem;
+
+    .privacy__list,
+    .social__list {
+      list-style: none;
+    }
+
+    .privacy__list {
+      margin-right: auto;
+    }
+
+    .privacy__item,
+    .social__item {
+      display: inline-block;
+
+      transition: all 0.2s;
+      &:hover {
+        color: $color-secondary;
+      }
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+
+    .change-region__btn {
+      font-weight: 700;
+      color: $color-secondary;
+
+      &::after {
+        content: "\2303";
+        display: inline-block;
+        margin-left: 3px;
+        transform: rotateX(180deg);
+        color: $color-black;
+      }
+
+      &:hover::after {
+        color: currentColor;
+      }
+
+      &:focus::after {
+        content: "\2303";
+        transform: rotateX(0);
+      }
+    }
+
+    .download-slack {
+      display: flex;
+      align-items: center;
+      color: $color-secondary;
+      margin-right: 2rem;
+      text-decoration: none;
+
+      span {
+        margin-left: 7px;
+      }
+    }
+  }
+
+  &__rights {
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .backdrop {
+    background-color: rgba($color-black, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .change-region {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-white;
+      box-shadow: $shadow-dark;
+      padding: 4rem;
+
+      .close-btn {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 1.6rem;
+      }
+
+      .regions {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .region {
+          &__list {
+            list-style: none;
+          }
+
+          &__item {
+            line-height: 1;
+            font-size: 1.6rem;
+            margin: 1.2rem 0;
+            transition: all 0.2s;
+            display: inline-block;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+              color: $color-secondary;
+              border-bottom: 1px solid currentColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
