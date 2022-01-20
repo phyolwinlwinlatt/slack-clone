@@ -13,7 +13,7 @@
 
 .heading-1 {
   @extend %heading;
-  font-size: 4.5rem;
+  font-size: 6rem;
 
   &--white {
     @extend %white-heading;
@@ -39,7 +39,7 @@
 
 .heading-3 {
   @extend %heading;
-  font-size: 2rem;
+  font-size: 1.8rem;
 
   &--white {
     @extend %white-heading;
@@ -59,10 +59,16 @@
 
 .heading-4 {
   @extend %heading;
+  font-size: 1.2rem;
+  font-weight: 100;
+
+  &--dark {
+    color: $color-grey-dark-1;
+  }
 }
 
 .text {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 
   &--white {
     @extend %white-heading;

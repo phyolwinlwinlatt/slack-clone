@@ -182,7 +182,7 @@ export default function Footer({ setSticky }) {
         <div className="backdrop">
           <div className="change-region">
             <h2 className="heading-2 heading-2--black">Change Region</h2>
-            <p className="text text--black mt-sm mb-md">
+            <p className="text text--black u-mt-sm u-mb-md">
               Selecting a different region will change the language and content
               of slack.com.
             </p>
@@ -199,7 +199,9 @@ export default function Footer({ setSticky }) {
             </button>
             <div className="regions">
               <div className="region">
-                <h3 className="heading-3 heading-3--normal mb-sm">Americas</h3>
+                <h3 className="heading-3 heading-3--normal u-mb-sm">
+                  Americas
+                </h3>
                 <ul className="region__list">
                   <li className="region__item">Latinoamérica (español)</li>
                   <li className="region__item">Brasil (português)</li>
@@ -207,7 +209,7 @@ export default function Footer({ setSticky }) {
                 </ul>
               </div>
               <div className="region">
-                <h3 className="heading-3 heading-3--normal mb-sm">Europe</h3>
+                <h3 className="heading-3 heading-3--normal u-mb-sm">Europe</h3>
                 <ul className="region__list">
                   <li className="region__item">Deutschland (Deutsch)</li>
                   <li className="region__item">España (español)</li>
@@ -218,7 +220,7 @@ export default function Footer({ setSticky }) {
                 </ul>
               </div>
               <div className="region">
-                <h3 className="heading-3 heading-3--normal mb-sm">
+                <h3 className="heading-3 heading-3--normal u-mb-sm">
                   Asia Pacific
                 </h3>
                 <ul className="region__list">

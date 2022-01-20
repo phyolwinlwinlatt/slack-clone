@@ -1,10 +1,17 @@
 import Image from "next/image";
 
 import TopBanner from "../common/TopBanner";
+import Card from "../components/card";
 import Layout from "../containers/Layout";
+
+//images
+import Guide1 from "../public/guide-1.png";
+import Guide2 from "../public/guide-2.png";
+import Guide3 from "../public/guide-3.png";
+
 import {
   container,
-  backgroundPrimary,
+  sectionWelcome,
   welcome,
   welcome__title,
   workspaces,
@@ -35,20 +42,36 @@ import {
   downloadSoftware,
   downloadSoftware__detail,
   downloadSoftware__close,
-  guides,
-  guides__grid,
-  guide,
-  guide__img,
-  guide__type,
-  guide__btn,
+  sectionGuides,
 } from "../sass/pages/index.module.scss";
+
+const cards = [
+  {
+    image: Guide1,
+    type: "Solutions",
+    title: "See how slack work for all kinds of teams",
+    linkText: "Learn More",
+  },
+  {
+    image: Guide2,
+    type: "Blog",
+    title: " Introducing Slack Connect: the future of business communication",
+    linkText: "Learn More",
+  },
+  {
+    image: Guide3,
+    type: "Blog",
+    title: "How to use channels to organize your work life",
+    linkText: "Learn More",
+  },
+];
 
 export default function Home() {
   return (
     <Layout headerColor="primary">
       <div className={container}>
         {/* <TopBanner /> */}
-        <div className={backgroundPrimary}>
+        <section className={sectionWelcome}>
           <div className={welcome}>
             <div className={welcome__title}>
               <Image
@@ -57,7 +80,9 @@ export default function Home() {
                 width={40}
                 height={40}
               />
-              <h1 className="heading-1 heading-1--white ml-sm">Welcome Back</h1>
+              <h1 className="heading-1 heading-1--white u-ml-sm">
+                Welcome Back
+              </h1>
             </div>
             <div className={workspaces}>
               <p className={accountName}>Workspaces for abcdef@gmail.com</p>
@@ -152,7 +177,10 @@ export default function Home() {
               <p className={newWorkspace__text}>
                 Want to use Slack with a different team?
               </p>
-              <button type="button" className="btn btn--primary-outlined mr-sm">
+              <button
+                type="button"
+                className="btn btn--primary-outlined u-mr-sm"
+              >
                 Create a new Workspace
               </button>
             </div>
@@ -200,11 +228,11 @@ export default function Home() {
               </div>
               <a
                 href="#"
-                className="link link--secondary link--underlined mr-xs"
+                className="link link--secondary link--underlined u-mr-xs"
               >
                 Download
               </a>
-              <span className="color-white text text--white">&darr;</span>
+              <span className="u-color-white text text--white">&darr;</span>
               <span className={downloadSoftware__close}>
                 <svg
                   width="18"
@@ -218,62 +246,23 @@ export default function Home() {
               </span>
             </div>
           </div>
-        </div>
-        <div className={guides}>
+        </section>
+        <section className={sectionGuides}>
           <h2 className="heading-2 heading-2--white">
             Learn how to use slack for work
           </h2>
-          <div className={guides__grid}>
-            <div className={guide}>
-              <Image
-                src="/guide-1.png"
-                alt="guide 1"
-                width={250}
-                height={250}
-                className={guide__img}
+          <div className="cards__grid">
+            {cards.map(({ image, type, title, linkText }) => (
+              <Card
+                key={title}
+                image={image}
+                type={type}
+                title={title}
+                linkText={linkText}
               />
-              <h4 className={guide__type}>Solutions</h4>
-              <h2 className="heading-2 heading-2--black">
-                See how slack work for all kinds of teams
-              </h2>
-              <button className={guide__btn}>
-                Learn More <span>&rarr;</span>
-              </button>
-            </div>
-            <div className={guide}>
-              <Image
-                src="/guide-2.png"
-                alt="guide 2"
-                width={250}
-                height={250}
-                className={guide__img}
-              />
-              <h4 className={guide__type}>Blog</h4>
-              <h2 className="heading-2 heading-2--black">
-                Introducing Slack Connect: the future of business communication
-              </h2>
-              <button className={guide__btn}>
-                Learn More <span>&rarr;</span>
-              </button>
-            </div>
-            <div className={guide}>
-              <Image
-                src="/guide-3.png"
-                alt="guide 3"
-                width={250}
-                height={250}
-                className={guide__img}
-              />
-              <h4 className={guide__type}>Blog</h4>
-              <h2 className="heading-2 heading-2--black">
-                How to use channels to organize your work life
-              </h2>
-              <button className={guide__btn}>
-                Read Story <span>&rarr;</span>
-              </button>
-            </div>
+            ))}
           </div>
-        </div>
+        </section>
       </div>
     </Layout>
   );

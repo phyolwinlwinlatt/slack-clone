@@ -1,35 +1,54 @@
-.mr-xs {
-  margin-right: 7px;
+//margins
+.u-mr-xs {
+  margin-right: 7px !important;
 }
 
-.mr-sm {
-  margin-right: 1.5rem;
+.u-mr-sm {
+  margin-right: 1.5rem !important;
 }
 
-.ml-sm {
-  margin-left: 1rem;
+.u-ml-sm {
+  margin-left: 1rem !important;
 }
 
-.mt-sm {
-  margin-top: 1rem;
+.u-mt-sm {
+  margin-top: 1rem !important;
 }
 
-.mb-sm {
-  margin-bottom: 1rem;
+.u-mt-md {
+  margin-top: 8rem !important;
 }
 
-.mb-md {
-  margin-bottom: 2rem;
+.u-mb-sm {
+  margin-bottom: 1rem !important;
 }
 
-.color-white {
-  color: $color-white;
+.u-mb-md {
+  margin-bottom: 2rem !important;
 }
 
-.color-black {
-  color: $color-black;
+//paddings
+.u-pt-lg {
+  padding-top: 4rem !important;
 }
 
-.text-center {
+//colors
+.u-color-white {
+  color: $color-white !important;
+}
+
+//max-width
+.u-max-width-85 {
+  max-width: 85% !important;
+  margin: 0 auto !important;
+}
+
+//align
+.u-text-center {
   text-align: center;
+}
+
+//background-colors
+.u-bg-grey-light {
+  background-color: $color-grey-light !important;
 }

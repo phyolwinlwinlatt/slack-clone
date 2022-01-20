@@ -1,0 +1,213 @@
+@import "../abstracts/variables";
+
+.container {
+  display: grid;
+  grid-template-rows: calc(70vh - 8rem);
+
+  .sectionIntro {
+    position: relative;
+    background-color: $color-white;
+    padding: 10rem;
+
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    grid-row-gap: 1.5rem;
+
+    .iconGreeting {
+      position: absolute;
+      top: 70%;
+      left: 20%;
+    }
+    .iconDuck {
+      position: absolute;
+      top: 60%;
+      right: 10%;
+    }
+    .iconHands {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+    }
+    .iconTick {
+      position: absolute;
+      top: 50%;
+      right: 20%;
+    }
+    .iconArrow {
+      position: absolute;
+      top: 15%;
+      right: 5%;
+    }
+    .iconCelebrate {
+      position: absolute;
+      top: 55%;
+      left: 5%;
+    }
+  }
+
+  .sectionSolutions {
+    background-color: $color-grey-light;
+    padding: 10rem 0;
+
+    .teams {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 15rem;
+      grid-column-gap: 4rem;
+
+      &__imgBox {
+        margin-top: -16rem;
+        margin-left: 7rem;
+      }
+    }
+
+    .applications {
+      display: grid;
+      grid-template-columns: repeat(3, 30rem);
+      grid-template-rows: repeat(2, 13rem);
+      grid-template-areas:
+        "engineering it customerService"
+        "engineering it customerService"
+        "sales projectManagement humanResources"
+        "sales marketing security";
+      grid-gap: 1rem;
+      align-content: start;
+
+      .engineering {
+        grid-area: engineering;
+      }
+
+      .it {
+        grid-area: it;
+      }
+
+      .customerService {
+        grid-area: customerService;
+      }
+
+      .sales {
+        grid-area: sales;
+      }
+
+      .projectManagement {
+        grid-area: projectManagement;
+      }
+
+      .humanResources {
+        grid-area: humanResources;
+      }
+
+      .marketing {
+        grid-area: marketing;
+      }
+
+      .security {
+        grid-area: security;
+      }
+    }
+
+    .companies {
+      margin-top: 10rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 12rem;
+      grid-column-gap: 2rem;
+
+      &__text {
+      }
+
+      &__imgBox {
+        margin-top: -6rem;
+      }
+    }
+
+    .services {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 30rem);
+      grid-column-gap: 2rem;
+      justify-content: end;
+    }
+
+    .things {
+      margin-top: 18rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 12rem;
+      grid-column-gap: 2rem;
+
+      &__text {
+      }
+
+      &__imgBox {
+        margin-top: -8rem;
+        margin-left: 15rem;
+      }
+    }
+
+    .tools {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(2, 30rem);
+      grid-column-gap: 2rem;
+    }
+  }
+
+  .sectionCompanies {
+    background-color: $color-white;
+
+    .sponsors {
+      padding: 6rem 0;
+      display: grid;
+      grid-template-columns: repeat(8, max-content);
+      align-items: center;
+      justify-content: space-between;
+      grid-column-gap: 1.5rem;
+    }
+  }
+
+  .sectionFAQ {
+  }
+
+  .sectionTalk {
+    background-color: $color-primary-dark;
+    padding: 12rem;
+    clip-path: ellipse(75% 100% at center top);
+    box-shadow: $shadow-dark;
+
+    display: grid;
+    grid-row-gap: 4rem;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+
+.iconCard {
+  background-color: $color-white;
+  box-shadow: $shadow-dark;
+  padding: 2rem;
+  transition: all 0.2s;
+  z-index: 2;
+  transform: scale(1);
+  position: relative;
+
+  display: grid;
+  grid-row-gap: 1.5rem;
+  align-content: start;
+
+  &:hover {
+    transform: scale(1.02);
+    color: $color-secondary;
+  }
+
+  &::after {
+    content: "\2192";
+    font-size: 3rem;
+    justify-self: end;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}

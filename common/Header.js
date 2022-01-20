@@ -149,7 +149,7 @@ export default function Header({ headerColor: color, sticky }) {
           </form>
           <button
             type="button"
-            className={`btn mr-sm ${
+            className={`btn u-mr-sm ${
               color === "primary"
                 ? "btn--white-outlined"
                 : "btn--primary-outlined"
@@ -272,7 +272,7 @@ export default function Header({ headerColor: color, sticky }) {
                 </svg>
               </button>
             </form>
-            <button type="button" className="btn mr-sm btn--primary-outlined">
+            <button type="button" className="btn u-mr-sm btn--primary-outlined">
               Talk To Sales
             </button>
             <button type="button" className="btn btn--primary-contained">
