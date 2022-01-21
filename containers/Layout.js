@@ -6,6 +6,7 @@ import Header from "../common/Header";
 
 export default function Layout({ headerColor, children }) {
   const [sticky, setSticky] = React.useState(false);
+  const [showDialog, setShowDialog] = React.useState(false);
 
   React.useEffect(() => {
     window.addEventListener("scroll", (e) => {
@@ -27,7 +28,11 @@ export default function Layout({ headerColor, children }) {
       </Head>
       <Header headerColor={headerColor} sticky={sticky} />
       <main>{children}</main>
-      <Footer setSticky={setSticky} />
+      <Footer
+        setSticky={setSticky}
+        showDialog={showDialog}
+        setShowDialog={setShowDialog}
+      />
     </div>
   );
 }

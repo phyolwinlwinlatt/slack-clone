@@ -1,8 +1,6 @@
 import React from "react";
 
-export default function Footer({ setSticky }) {
-  const [showDialog, setShowDialog] = React.useState(false);
-
+export default function Footer({ setSticky, showDialog, setShowDialog }) {
   React.useEffect(() => {
     if (showDialog) {
       setSticky(false);

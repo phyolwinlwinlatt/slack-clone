@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import Layout from "../containers/Layout";
 import Card from "../components/card";
+import Sponsors from "../components/Sponsors";
 
 import phone from "./../public/phone.jpeg";
 import legs from "./../public/legs.jpeg";
@@ -11,6 +12,7 @@ import working from "./../public/working.png";
 import {
   container,
   sectionIntro,
+  animationSlideUp,
   iconGreeting,
   iconDuck,
   iconHands,
@@ -40,8 +42,6 @@ import {
   things__imgBox,
   tools,
   sectionCompanies,
-  sponsors,
-  sponsor__imgBox,
   sectionFAQ,
   sectionTalk,
 } from "../sass/pages/solutions.module.scss";
@@ -79,9 +79,11 @@ export default function Solutions() {
     <Layout>
       <div className={container}>
         <section className={sectionIntro}>
-          <h1 className="heading-1 heading-1--black u-mb-sm">
-            Where Closing deals happens
-          </h1>
+          <div className={animationSlideUp}>
+            <h1 className="heading-1 heading-1--black u-mb-sm">
+              Where Closing deals happens
+            </h1>
+          </div>
           <p className="text text--black">
             Whatever work you do, you can use Slack for your business.
           </p>
@@ -529,72 +531,7 @@ export default function Solutions() {
                   />
                 ))}
               </div>
-              <div className={sponsors}>
-                <div className={sponsor__imgBox}>
-                  <Image
-                    src="/ameritrade-logo@2x.png"
-                    alt="Ameritrade logo"
-                    width={120}
-                    height={30}
-                  />
-                </div>
-                <div className={sponsor__imgBox}>
-                  <Image
-                    src="/target-logo@2x.png"
-                    alt="Target Logo"
-                    width={35}
-                    height={35}
-                  />
-                </div>
-                <div className={sponsor__imgBox}>
-                  <Image
-                    src="/uber@2x.png"
-                    alt="Uber Logo"
-                    width={80}
-                    height={30}
-                  />
-                </div>
-                <div className={sponsor__imgBox}>
-                  <Image
-                    src="/logo-onemedical@2x.png"
-                    alt="One Medical"
-                    width={120}
-                    height={30}
-                  />
-                </div>
-                <div className={sponsor__imgBox}>
-                  <Image
-                    src="/logo-netflix@2x.png"
-                    alt="Netflix Logo"
-                    width={90}
-                    height={30}
-                  />
-                </div>
-                <div className={sponsor__imgBox}>
-                  <Image
-                    src="/us-department-of-veteran-affairs@2x.png"
-                    alt="Veteran Affairs"
-                    width={220}
-                    height={40}
-                  />
-                </div>
-                <div className={sponsor__imgBox}>
-                  <Image
-                    src="/intuit@2x.png"
-                    alt="Intuit Logo"
-                    width={130}
-                    height={30}
-                  />
-                </div>
-                <div className={sponsor__imgBox}>
-                  <Image
-                    src="/logo-expedia@2x.png"
-                    alt="Expedia"
-                    width={120}
-                    height={30}
-                  />
-                </div>
-              </div>
+              <Sponsors />
             </section>
             <section className={sectionFAQ}></section>
           </div>

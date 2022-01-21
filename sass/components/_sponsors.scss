@@ -1,0 +1,8 @@
+.sponsors {
+  padding: 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(8, max-content);
+  align-items: center;
+  justify-content: space-between;
+  grid-column-gap: 1.5rem;
+}

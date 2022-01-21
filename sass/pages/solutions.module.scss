@@ -1,4 +1,5 @@
 @import "../abstracts/variables";
+@import "../base/animation";
 
 .container {
   display: grid;
@@ -14,6 +15,11 @@
     justify-items: center;
     align-content: center;
     grid-row-gap: 1.5rem;
+
+    .animationSlideUp {
+      transition: all 0.5s;
+      animation: slideUp 0.5s backwards;
+    }
 
     .iconGreeting {
       position: absolute;
@@ -157,15 +163,6 @@
 
   .sectionCompanies {
     background-color: $color-white;
-
-    .sponsors {
-      padding: 6rem 0;
-      display: grid;
-      grid-template-columns: repeat(8, max-content);
-      align-items: center;
-      justify-content: space-between;
-      grid-column-gap: 1.5rem;
-    }
   }
 
   .sectionFAQ {

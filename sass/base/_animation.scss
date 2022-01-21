@@ -1,8 +1,26 @@
-@keyframes slideUp {
+@keyframes slideDown {
   0% {
     transform: translateY(-5rem);
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(3rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceUp {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateY(-3px);
   }
 }
